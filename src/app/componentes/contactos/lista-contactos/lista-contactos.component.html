@@ -1,0 +1,35 @@
+<div class="card" style="background-color: lightblue" >
+  <div class="card-body">
+    <h3 class="text-center">Agenda de contactos</h3>
+    <table class="table table-sm table-hover table-bordered table-responsive-sm" >
+      <thead class=" bg-success">
+        <tr >
+          <th>Nombre</th>
+          <th>Numero</th>
+          <th>Numero de Casa</th>
+          <th>Instagram</th>
+
+          <th>Herramientas</th>
+        </tr>
+      </thead>
+      <tbody style="background-color: whitesmoke">
+        <tr *ngFor="let contacto of listaContactos" >
+          <td>{{contacto.nombre}}</td>
+          <td>{{contacto.casa}}</td>
+          <td>{{contacto.movil}}</td>
+          <td> 
+            <a href="https://www.instagram.com/{{contacto.instagram}}" class="btn btn-lg" target="_blank" ><i class="fab fa-instagram" title="{{contacto.instagram}}"></i></a> </td>
+          <td>
+            <a class="btn btn-success text-white"  (click)="onEdit(contacto)">
+            <i class="fas fa-edit"></i>
+            </a><span></span>
+            <a class="btn btn-danger text-white" style="margin-left: 10%" (click)="onDelete(contacto.$key)">
+              <i class="fas fa-trash-alt" ></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h6 style="margin-left: 80% ">Angular™</h6>
+  </div>
+</div>
