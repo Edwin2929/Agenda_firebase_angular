@@ -1,0 +1,6 @@
+Este proyecto presenta una aplicacion con angular clic y firebase mostrando una agenda telefonica
+
+para compilar
+-en la terminal de visual code poner ng serve -o
+
+-despues les aparecera el crud con la direccion localhost:4200
